@@ -1,7 +1,7 @@
 <h1 align="center" font-size="200em"><b>Prática 1 - Árvore Binária</b></h1>
 
 ## Introdução
-<div align="center">
+<p align="center">
 Este projeto é uma implementação de uma estrutura de árvore binária em C++ com funcionalidades avançadas, incluindo inserção e remoção de nós, cálculo do nível máximo da árvore, determinação do caminho mais longo e sugestões de rotações para balanceamento da árvore.
 </p>
 
