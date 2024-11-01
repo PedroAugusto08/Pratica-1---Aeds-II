@@ -77,3 +77,14 @@ void ArvoreBinaria::encontrarCaminhoMaisLongoRecursivo(Node* node, vector<int>& 
     encontrarCaminhoMaisLongoRecursivo(node->direita, caminho_atual, caminho_mais_longo);
     caminho_atual.pop_back();
 }
+
+void ArvoreBinaria::sugerirRotacoesRecursivo(Node* node) {
+    if (!node) return;
+    int profundidade_esquerda = node->esquerda ? calcularNivelMaximo(node->esquerda) : 0;
+    int profundidade_direita = node->direita ? calcularNivelMaximo(node->direita) : 0;
+    if (abs(profundidade_esquerda - profundidade_direita) > 1) {
+        std::cout << "Considerar rotação no nó " << node->valor << std::endl;
+    }
+    sugerirRotacoesRecursivo(node->esquerda);
+    sugerirRotacoesRecursivo(node->direita);
+}

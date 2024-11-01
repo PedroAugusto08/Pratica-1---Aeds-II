@@ -1,7 +1,7 @@
 <h1 align="center" font-size="200em"><b>Prática 1 - Árvore Binária</b></h1>
 
-## Introdução
 <p align="center">
+## Introdução
 Este projeto é uma implementação de uma estrutura de árvore binária em C++ com funcionalidades avançadas, incluindo inserção e remoção de nós, cálculo do nível máximo da árvore, determinação do caminho mais longo e sugestões de rotações para balanceamento da árvore.
 </p>
 
@@ -28,14 +28,63 @@ O código é dividido em três arquivos principais:
 `Node.h`: Define a estrutura básica do nó da árvore, com atributos para armazenar o valor do nó e ponteiros para os nós filhos.
 `ArvoreBinaria.h` e `ArvoreBinaria.cpp`: Contêm a implementação da classe ArvoreBinaria, que possui métodos para inserção, remoção, balanceamento e outras operações na árvore.
 
+
+
 ├── `main.cpp`              # Lógica principal do programa e exemplos de uso
+
 ├── `Node.h`                # Estrutura básica do nó da árvore
+
 ├── `ArvoreBinaria.h`       # Declaração da classe ArvoreBinaria e seus métodos
+
 ├── `ArvoreBinaria.cpp`     # Implementação da classe ArvoreBinaria
+
 └── `README.md`             # Documentação do projeto
 
 
+## Descrição do Código 📖
 
+O projeto conta com diversas funções essenciais para a manipulação da árvore binária, que permitem realizar operações de inserção, remoção, cálculo de nível, e até sugestões de rotações. Vamos entender cada uma delas:
+
+1. Função `inserir(int valor)`
+- Insere um novo valor na árvore.
+- Chama a função recursiva inserirRecursivo para realizar a inserção correta na árvore binária.
+- Após a inserção, a função calcula e atualiza o nível máximo da árvore.
+- Exibe o nível máximo após a inserção para monitoramento.
+2. Função `remover(int valor)`
+- Remove um valor específico da árvore.
+- Utiliza a função removerRecursivo para encontrar e remover o nó.
+- Após a remoção, recalcula o nível máximo da árvore e exibe o valor atualizado.
+3. Função `obterNivelMaximo()`
+- Retorna o nível máximo atual da árvore.
+- Chama a função calcularNivelMaximo, que calcula a profundidade máxima a partir da raiz.
+4. Função `encontrarCaminhoMaisLongo()`
+- Retorna um vetor contendo o caminho mais longo da raiz até a folha mais distante.
+- Usa a função encontrarCaminhoMaisLongoRecursivo para percorrer a árvore e encontrar o caminho com o maior número de nós.
+- Esse caminho pode ser útil para verificar o grau de balanceamento da árvore.
+5. Função `sugerirRotacoes()`
+- Exibe sugestões de rotações para melhorar o balanceamento da árvore.
+- Utiliza a função sugerirRotacoesRecursivo para percorrer a árvore e verificar a diferença de profundidade entre subárvores de cada nó.
+- Caso a diferença de profundidade entre os ramos esquerdo e direito de um nó seja maior que 1, o programa sugere uma rotação nesse nó.
+6. Função `inserirRecursivo(Node* node, int valor)`
+- Função auxiliar chamada pela inserir().
+- Insere o valor recursivamente, seguindo a regra de árvores binárias: valores menores vão para a esquerda e valores maiores para a direita.
+7. Função `removerRecursivo(Node* node, int valor)`
+- Função auxiliar chamada pela remover().
+- Procura o valor a ser removido na árvore e realiza a remoção adequada.
+- Lida com os três casos de remoção: nó folha, nó com um único filho, e nó com dois filhos.
+8. Função `encontrarMinimo(Node* node)`
+- Retorna o nó com o menor valor na subárvore dada.
+- Essa função é usada principalmente durante a remoção de um nó com dois filhos, pois substitui o valor do nó removido pelo valor mínimo da subárvore direita.
+9. Função `calcularNivelMaximo(Node* node, int nivel = 0)`
+- Calcula a profundidade máxima da árvore, usada para medir o nível máximo a partir da raiz.
+- Executa uma busca recursiva, calculando o nível máximo em cada ramo e retornando o valor mais alto.
+10. Função `encontrarCaminhoMaisLongoRecursivo(Node* node, vector<int>& caminho_atual, vector<int>& caminho_mais_longo)`
+- Função auxiliar que percorre recursivamente a árvore, construindo o caminho mais longo.
+- Armazena temporariamente o caminho atual e substitui o caminho_mais_longo quando encontra um novo caminho maior.
+11. Função `sugerirRotacoesRecursivo(Node* node)`
+- Função auxiliar para sugerir rotações de balanceamento.
+- Calcula a profundidade dos ramos esquerdo e direito e, se houver um desbalanceamento (diferença de profundidade maior que 1), sugere uma rotação no nó atual.
+- Essa função pode ajudar a identificar partes da árvore que estão desbalanceadas e precisam de ajustes.
 
 
 
