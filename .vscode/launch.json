@@ -8,7 +8,7 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/pedro/vscode_ubuntu/Pratica-1---Aeds-II/src",
+      "cwd": "${workspaceFolder}",
       "program": "/home/pedro/vscode_ubuntu/Pratica-1---Aeds-II/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",

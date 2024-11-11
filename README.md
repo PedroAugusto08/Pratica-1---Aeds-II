@@ -26,16 +26,16 @@ Este projeto, além de fornecer uma base sólida para o entendimento de árvores
 O código é dividido em três arquivos principais:
 
 `main.cpp`: Contém a lógica principal do programa e exemplos de uso da árvore binária.
-`Node.h`: Define a estrutura básica do nó da árvore, com atributos para armazenar o valor do nó e ponteiros para os nós filhos.
+`Node.hpp`: Define a estrutura básica do nó da árvore, com atributos para armazenar o valor do nó e ponteiros para os nós filhos.
 `ArvoreBinaria.h` e `ArvoreBinaria.cpp`: Contêm a implementação da classe ArvoreBinaria, que possui métodos para inserção, remoção, balanceamento e outras operações na árvore.
 
 
 
 ├── `main.cpp`              -> Lógica principal do programa e exemplos de uso
 
-├── `Node.h`                -> Estrutura básica do nó da árvore
+├── `Node.hpp`                -> Estrutura básica do nó da árvore
 
-├── `ArvoreBinaria.h`       -> Declaração da classe ArvoreBinaria e seus métodos
+├── `ArvoreBinaria.hpp`       -> Declaração da classe ArvoreBinaria e seus métodos
 
 ├── `ArvoreBinaria.cpp`     -> Implementação da classe ArvoreBinaria
 
@@ -95,7 +95,7 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 <p align="center">
 
 ## Introdução
-
+Este projeto implementa uma árvore AVL em C++ que realiza operações de autocompletar com base em um dicionário de palavras. A árvore AVL é uma estrutura de dados balanceada que permite inserção, busca e sugestão de palavras de forma eficiente, ideal para aplicações onde o desempenho é essencial, como sistemas de autocompletar.
 </p>
 
 ## Objetivos 🎯
@@ -104,14 +104,31 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 
 ## Estrutura de Arquivos 📂 
 
-
+├── main.cpp              -> Menu principal e exemplo de uso do dicionário e árvore de valores
+├── ArvoreAVL.hpp         -> Declaração da classe ArvoreAVL para autocompletar
+├── ArvoreAVL.cpp         -> Implementação da classe ArvoreAVL
 
 ## Descrição do Código 📖
 
+`Arquivo ArvoreAVL.hpp`
+Define a estrutura da árvore AVL e os métodos principais utilizados para inserir palavras e sugerir autocompletar. As principais seções são:
+
+- Estrutura NoAVL: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
+- Classe ArvoreAVL: Gerencia a árvore AVL e implementa métodos essenciais:
+-> `inserir(const string& palavra)`: Insere uma nova palavra na árvore e realiza balanceamento se necessário.
+-> `autocompletar(const string& prefixo)`: Recebe um prefixo e retorna uma lista de palavras que começam com esse prefixo.
+
+`Arquivo ArvoreAVL.cpp`
+Implementa a lógica das funções definidas em ArvoreAVL.hpp, incluindo as operações de balanceamento AVL e a função de autocompletar. As principais funções incluem:
+
+Funções de Balanceamento:
+- `altura(NoAVL* no)`: Retorna a altura de um nó.
+- `obterBalanceamento(NoAVL* no)`: Calcula o fator de balanceamento para determinar se é necessário realizar rotações.
+- `rotacionarDireita e rotacionarEsquerda`: Realizam rotações para balancear a árvore.
+- `Função autocompletar`: Recebe um nó, um prefixo e uma referência para o vetor de sugestões. Percorre a árvore e armazena palavras que começam com o prefixo.
 
 
-
-## Compilação e Execução
+## Compilação e Execução 💻
 
  Especificações da máquina em que o código foi rodado:
   * Processador Intel i5-11400H;

@@ -56,15 +56,14 @@ vector<string> ArvoreAVL::autocompletar(const string& prefixo) {
 void ArvoreAVL::autocompletar(NoAVL* no, const string& prefixo, vector<string>& sugestoes) {
     if (no == nullptr) return;
 
-    if (no->palavra.find(prefixo) == 0) {
+    // Verifica se o valor do nó começa com o prefixo
+    if (no->palavra.substr(0, prefixo.size()) == prefixo) {
         sugestoes.push_back(no->palavra);
     }
 
-    if (prefixo < no->palavra) {
-        autocompletar(no->esquerdo, prefixo, sugestoes);
-    } else {
-        autocompletar(no->direito, prefixo, sugestoes);
-    }
+    // Realiza a busca em ambos os lados da árvore
+    autocompletar(no->esquerdo, prefixo, sugestoes);
+    autocompletar(no->direito, prefixo, sugestoes);
 }
 
 // Funções auxiliares de balanceamento e altura
