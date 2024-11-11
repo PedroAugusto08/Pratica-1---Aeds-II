@@ -123,16 +123,17 @@ Este projeto implementa uma árvore AVL em C++ que realiza operações de autoco
 
 ## Descrição do Código 📖
 
-`Arquivo ArvoreAVL.hpp`
+**`Arquivo ArvoreAVL.hpp`**
 </p>
 Define a estrutura da árvore AVL e os métodos principais utilizados para inserir palavras e sugerir autocompletar. As principais seções são:
 
-- **Estrutura NoAV**L**: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
-- **Classe ArvoreAVL**: Gerencia a árvore AVL e implementa métodos essenciais:
+- *Estrutura NoAV*: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
+- *Classe ArvoreAVL*: Gerencia a árvore AVL e implementa métodos essenciais:
 - `inserir(const string& palavra)`: Insere uma nova palavra na árvore e realiza balanceamento se necessário.
 - `autocompletar(const string& prefixo)`: Recebe um prefixo e retorna uma lista de palavras que começam com esse prefixo.
+</p>
 
-`Arquivo ArvoreAVL.cpp`
+**`Arquivo ArvoreAVL.cpp`**
 </p>
 Implementa a lógica das funções definidas em ArvoreAVL.hpp, incluindo as operações de balanceamento AVL e a função de autocompletar. As principais funções incluem:
 
