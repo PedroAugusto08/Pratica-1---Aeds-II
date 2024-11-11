@@ -88,7 +88,7 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 - Essa função pode ajudar a identificar partes da árvore que estão desbalanceadas e precisam de ajustes.
 
 
-
+---
 
 <h1 align="center" font-size="200em"><b>Prática 1 - Dicionário Eletrônico</b></h1>
 
@@ -105,12 +105,15 @@ Este projeto implementa uma árvore AVL em C++ que realiza operações de autoco
 ## Estrutura de Arquivos 📂 
 
 ├── main.cpp              -> Menu principal e exemplo de uso do dicionário e árvore de valores
+
 ├── ArvoreAVL.hpp         -> Declaração da classe ArvoreAVL para autocompletar
+
 ├── ArvoreAVL.cpp         -> Implementação da classe ArvoreAVL
 
 ## Descrição do Código 📖
 
 `Arquivo ArvoreAVL.hpp`
+</p>
 Define a estrutura da árvore AVL e os métodos principais utilizados para inserir palavras e sugerir autocompletar. As principais seções são:
 
 - Estrutura NoAVL: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
