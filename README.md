@@ -1,6 +1,7 @@
 <h1 align="center" font-size="200em"><b>Prática 1 - Árvore Binária</b></h1>
 
 <p align="center">
+
 ## Introdução
 Este projeto é uma implementação de uma estrutura de árvore binária em C++ com funcionalidades avançadas, incluindo inserção e remoção de nós, cálculo do nível máximo da árvore, determinação do caminho mais longo e sugestões de rotações para balanceamento da árvore.
 </p>
@@ -30,15 +31,15 @@ O código é dividido em três arquivos principais:
 
 
 
-├── `main.cpp`              # Lógica principal do programa e exemplos de uso
+├── `main.cpp`              -> Lógica principal do programa e exemplos de uso
 
-├── `Node.h`                # Estrutura básica do nó da árvore
+├── `Node.h`                -> Estrutura básica do nó da árvore
 
-├── `ArvoreBinaria.h`       # Declaração da classe ArvoreBinaria e seus métodos
+├── `ArvoreBinaria.h`       -> Declaração da classe ArvoreBinaria e seus métodos
 
-├── `ArvoreBinaria.cpp`     # Implementação da classe ArvoreBinaria
+├── `ArvoreBinaria.cpp`     -> Implementação da classe ArvoreBinaria
 
-└── `README.md`             # Documentação do projeto
+└── `README.md`             -> Documentação do projeto
 
 
 ## Descrição do Código 📖
@@ -89,6 +90,25 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 
 
 
+<h1 align="center" font-size="200em"><b>Prática 1 - Dicionário Eletrônico</b></h1>
+
+<p align="center">
+
+## Introdução
+
+</p>
+
+## Objetivos 🎯
+
+</p>
+
+## Estrutura de Arquivos 📂 
+
+
+
+## Descrição do Código 📖
+
+
 
 
 ## Compilação e Execução
@@ -97,11 +117,11 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
   * Processador Intel i5-11400H;
   * Sistema Operacional Ubuntu 22.04.01;
   * 16 GB de RAM.
-* | * | Comando            |  Função                                                                                       |
-  | -----------------------| ------------------------------------------------------------------------------------------------- |
-  |  `make clean`          | Apaga a última compilação realizada contida na pasta build.                                       |
-  |  `make`                | Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build.          |
-  |  `make run`            | Executa o programa da pasta build após a realização da compilação.                                |
+  * | * | Comando            |  Função                                                                                       |
+    | -----------------------| ------------------------------------------------------------------------------------------------- |
+    |  `make clean`          | Apaga a última compilação realizada contida na pasta build.                                       |
+    |  `make`                | Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build.          |
+    |  `make run`            | Executa o programa da pasta build após a realização da compilação.                                |
 
 ---
 
