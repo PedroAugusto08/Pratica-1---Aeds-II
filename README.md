@@ -100,6 +100,17 @@ Este projeto implementa uma árvore AVL em C++ que realiza operações de autoco
 
 ## Objetivos 🎯
 
+**Implementar Autocompletar Eficiente**: Usar a árvore AVL para sugerir palavras rapidamente com base em um prefixo fornecido pelo usuário.
+
+**Manter Estrutura Balanceada**: Garantir que a árvore AVL esteja balanceada, melhorando a eficiência das buscas mesmo com grandes volumes de dados.
+
+**Carregar Dados de um Dicionário**: Ler palavras de um arquivo .txt e organizá-las na árvore AVL de forma estruturada.
+
+**Exibir Sugestões de Palavras**: Listar todas as palavras que começam com o prefixo digitado, ajudando o usuário a encontrar palavras mais rapidamente.
+
+**Interface de Linha de Comando**: Oferecer uma interface simples para escolher funcionalidades como inserir e autocompletar.
+
+**Ensinar Estruturas de Dados na Prática**: Demonstrar como árvores AVL podem resolver problemas reais, como o autocompletar, de maneira didática.
 </p>
 
 ## Estrutura de Arquivos 📂 
@@ -116,12 +127,13 @@ Este projeto implementa uma árvore AVL em C++ que realiza operações de autoco
 </p>
 Define a estrutura da árvore AVL e os métodos principais utilizados para inserir palavras e sugerir autocompletar. As principais seções são:
 
-- Estrutura NoAVL: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
-- Classe ArvoreAVL: Gerencia a árvore AVL e implementa métodos essenciais:
--> `inserir(const string& palavra)`: Insere uma nova palavra na árvore e realiza balanceamento se necessário.
--> `autocompletar(const string& prefixo)`: Recebe um prefixo e retorna uma lista de palavras que começam com esse prefixo.
+- **Estrutura NoAV**L**: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
+- **Classe ArvoreAVL**: Gerencia a árvore AVL e implementa métodos essenciais:
+- `inserir(const string& palavra)`: Insere uma nova palavra na árvore e realiza balanceamento se necessário.
+- `autocompletar(const string& prefixo)`: Recebe um prefixo e retorna uma lista de palavras que começam com esse prefixo.
 
 `Arquivo ArvoreAVL.cpp`
+</p>
 Implementa a lógica das funções definidas em ArvoreAVL.hpp, incluindo as operações de balanceamento AVL e a função de autocompletar. As principais funções incluem:
 
 Funções de Balanceamento:
