@@ -1,0 +1,5 @@
+abacate
+banana
+carro
+computador
+livro
