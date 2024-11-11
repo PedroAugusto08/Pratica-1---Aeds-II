@@ -117,11 +117,11 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
   * Processador Intel i5-11400H;
   * Sistema Operacional Ubuntu 22.04.01;
   * 16 GB de RAM.
-  * | * | Comando            |  Função                                                                                       |
-    | -----------------------| ------------------------------------------------------------------------------------------------- |
-    |  `make clean`          | Apaga a última compilação realizada contida na pasta build.                                       |
-    |  `make`                | Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build.          |
-    |  `make run`            | Executa o programa da pasta build após a realização da compilação.                                |
+* | Comando                | Função                                                                                            |       
+  | -----------------------| ------------------------------------------------------------------------------------------------- |
+  |  `make clean`          | Apaga a última compilação realizada contida na pasta build.                                       |
+  |  `make`                | Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build.          |
+  |  `make run`            | Executa o programa da pasta build após a realização da compilação.                                |
 
 ---
 
