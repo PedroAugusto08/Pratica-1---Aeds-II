@@ -106,7 +106,7 @@ Embora esse número varie dependendo do grau de desbalanceamento, o impacto no d
 2. `Como o desbalanceamento afeta o comprimento do caminho em comparação com uma árvore idealmente balanceada?`
 </p>
 
-- **Árvore Balanceada**: Em uma árvore idealmente balanceada, a altura da árvore é minimizada e segue aproximadamente \( \lceil \log_2(n+1) \rceil \). Isso reduz a profundidade média dos nós, permitindo buscas e outras operações em tempo logarítmico.
+- **Árvore Balanceada**: Em uma árvore idealmente balanceada, a altura da árvore é minimizada e segue aproximadamente log2(n+1). Isso reduz a profundidade média dos nós, permitindo buscas e outras operações em tempo logarítmico.
 </p>
 
 - **Árvore desbalanceada**: Quando uma árvore está desbalanceada, sua altura pode se aproximar de 𝑛, especialmente se ela degenerar em uma lista. Isso aumenta o comprimento médio dos caminhos e, consequentemente, o número de comparações realizadas para encontrar um elemento. Operações como busca, inserção e remoção tornam-se mais custosas, pois a árvore perde sua eficiência logarítmica.
