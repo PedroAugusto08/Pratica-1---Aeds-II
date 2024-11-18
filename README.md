@@ -1,4 +1,6 @@
-<h1 align="center" font-size="200em"><b>Prática 1 - Árvore Binária</b></h1>
+<h1 align="center" font-size="200em"><b>Prática</b></h1>
+<h1 align="center" font-size="100em"><b>Árvore Binária</b></h1>
+
 
 <p align="center">
 
@@ -87,10 +89,25 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 - Calcula a profundidade dos ramos esquerdo e direito e, se houver um desbalanceamento (diferença de profundidade maior que 1), sugere uma rotação no nó atual.
 - Essa função pode ajudar a identificar partes da árvore que estão desbalanceadas e precisam de ajustes.
 
+## Observações e questionamentos
+
+1. `A prerrogativa de custo de 39% de depreciação ocorre em árvores não balanceadas em comparação com árvores balanceadas?`
+</p>
+A eficiência de busca em uma árvore binária de busca (BST) é diretamente influenciada pelo balanceamento da estrutura. Em uma árvore idealmente balanceada, o custo médio de busca, inserção ou remoção é proporcional a 𝑂(log 𝑛), onde 𝑛 é o número de nós. Já em uma árvore não balanceada, o custo sobe para 𝑂(𝑛).
+Estudos e análises experimentais sugerem que, em média, árvores desbalanceadas podem sofrer uma redução de desempenho de aproximadamente 39% em operações de busca. Essa depreciação ocorre porque, em uma árvore desbalanceada, muitos nós podem ser acessados antes de encontrar o elemento desejado, aumentando significativamente o número de comparações.
+Embora o valor exato da depreciação (39%) dependa da profundidade e do grau de desbalanceamento da árvore, a regra geral é que o desempenho piora substancialmente à medida que a árvore se torna mais desbalanceada.
+
+</p>
+
+2. `Como o desbalanceamento afeta o comprimento do caminho em comparação com uma árvore idealmente balanceada?`
+</p>
+- **Árvore Balanceada**: Em uma árvore idealmente balanceada, a altura da árvore é minimizada e segue aproximadamente \( \lceil \log_2(n+1) \rceil \). Isso reduz a profundidade média dos nós, permitindo buscas e outras operações em tempo logarítmico.
+</p>
+- **Árvore desbalanceada**: Quando uma árvore está desbalanceada, sua altura pode se aproximar de 𝑛, especialmente se ela degenerar em uma lista. Isso aumenta o comprimento médio dos caminhos e, consequentemente, o número de comparações realizadas para encontrar um elemento. Operações como busca, inserção e remoção tornam-se mais custosas, pois a árvore perde sua eficiência logarítmica.
 
 ---
 
-<h1 align="center" font-size="200em"><b>Prática 1 - Dicionário Eletrônico</b></h1>
+<h1 align="center" font-size="100em"><b>Dicionário Eletrônico</b></h1>
 
 <p align="center">
 
