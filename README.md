@@ -89,20 +89,26 @@ O projeto conta com diversas funções essenciais para a manipulação da árvor
 - Calcula a profundidade dos ramos esquerdo e direito e, se houver um desbalanceamento (diferença de profundidade maior que 1), sugere uma rotação no nó atual.
 - Essa função pode ajudar a identificar partes da árvore que estão desbalanceadas e precisam de ajustes.
 
-## Observações e questionamentos
+## Observações e questionamentos 💭
 
 1. `A prerrogativa de custo de 39% de depreciação ocorre em árvores não balanceadas em comparação com árvores balanceadas?`
 </p>
-A eficiência de busca em uma árvore binária de busca (BST) é diretamente influenciada pelo balanceamento da estrutura. Em uma árvore idealmente balanceada, o custo médio de busca, inserção ou remoção é proporcional a 𝑂(log 𝑛), onde 𝑛 é o número de nós. Já em uma árvore não balanceada, o custo sobe para 𝑂(𝑛).
+
+O desempenho de busca em uma árvore binária de busca depende muito do quão bem balanceada ela está. Em uma árvore balanceada, operações como busca, inserção e remoção têm um custo médio proporcional a 𝑂(log 𝑛), onde 𝑛 é o número de nós. Já em uma árvore não balanceada, o custo sobe para 𝑂(𝑛).
+
 Estudos e análises experimentais sugerem que, em média, árvores desbalanceadas podem sofrer uma redução de desempenho de aproximadamente 39% em operações de busca. Essa depreciação ocorre porque, em uma árvore desbalanceada, muitos nós podem ser acessados antes de encontrar o elemento desejado, aumentando significativamente o número de comparações.
-Embora o valor exato da depreciação (39%) dependa da profundidade e do grau de desbalanceamento da árvore, a regra geral é que o desempenho piora substancialmente à medida que a árvore se torna mais desbalanceada.
+
+Embora esse número varie dependendo do grau de desbalanceamento, o impacto no desempenho é sempre significativo quanto maior for a desorganização da árvore.
 
 </p>
+
 
 2. `Como o desbalanceamento afeta o comprimento do caminho em comparação com uma árvore idealmente balanceada?`
 </p>
+
 - **Árvore Balanceada**: Em uma árvore idealmente balanceada, a altura da árvore é minimizada e segue aproximadamente \( \lceil \log_2(n+1) \rceil \). Isso reduz a profundidade média dos nós, permitindo buscas e outras operações em tempo logarítmico.
 </p>
+
 - **Árvore desbalanceada**: Quando uma árvore está desbalanceada, sua altura pode se aproximar de 𝑛, especialmente se ela degenerar em uma lista. Isso aumenta o comprimento médio dos caminhos e, consequentemente, o número de comparações realizadas para encontrar um elemento. Operações como busca, inserção e remoção tornam-se mais custosas, pois a árvore perde sua eficiência logarítmica.
 
 ---
@@ -142,6 +148,7 @@ Este projeto implementa uma árvore AVL em C++ que realiza operações de autoco
 
 **`Arquivo ArvoreAVL.hpp`**
 </p>
+
 Define a estrutura da árvore AVL e os métodos principais utilizados para inserir palavras e sugerir autocompletar. As principais seções são:
 
 - *Estrutura NoAV*: Representa cada nó da árvore, contendo a palavra, altura do nó, e ponteiros para os filhos esquerdo e direito.
@@ -152,6 +159,7 @@ Define a estrutura da árvore AVL e os métodos principais utilizados para inser
 
 **`Arquivo ArvoreAVL.cpp`**
 </p>
+
 Implementa a lógica das funções definidas em ArvoreAVL.hpp, incluindo as operações de balanceamento AVL e a função de autocompletar. As principais funções incluem:
 
 Funções de Balanceamento:
@@ -160,6 +168,13 @@ Funções de Balanceamento:
 - `rotacionarDireita e rotacionarEsquerda`: Realizam rotações para balancear a árvore.
 - `Função autocompletar`: Recebe um nó, um prefixo e uma referência para o vetor de sugestões. Percorre a árvore e armazena palavras que começam com o prefixo.
 
+## Observações e Questionamentos 💭
+
+1. `Discuta a eficiência do autocompletar utilizando a árvore binária e apresente uma análise comparativa em termos de tempo de busca para diferentes tamanhos de dicionário`
+
+O autocompletar com uma árvore AVL é eficiente devido ao balanceamento, que garante um tempo de busca proporcional a 𝑂(log 𝑛), mesmo em dicionários grandes. Em árvores desbalanceadas, o tempo pode chegar a 𝑂(𝑛), tornando a busca mais lenta à medida que o dicionário cresce.
+
+A AVL também organiza palavras de forma ordenada, permitindo localizar rapidamente palavras com o mesmo prefixo. Para dicionários maiores, essa estrutura se destaca por oferecer buscas muito mais rápidas e consistentes em comparação a árvores desbalanceadas.
 
 ## Compilação e Execução 💻
 
